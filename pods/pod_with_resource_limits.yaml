@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      resources:
+        limits: # pod won't grow above these limits
+          cpu: "1"
+          memory: "10Mi"
+        requests: # pod will get at least this amount
+          cpu: "0.5"
+          memory: "5Mi"
+
