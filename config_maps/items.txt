@@ -1,0 +1,2 @@
+HOST=mongodb
+PORT=27017
