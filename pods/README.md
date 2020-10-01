@@ -42,6 +42,12 @@ kubectl label pod mypod app-
 kubectl port-forward mypod 8080:80
 ```
 
+**Force pod delete**
+
+```shell script
+kubectl delete pod mypod --force --grace-period=0
+````
+
 **Create pod with resource limits**
 
 ```yaml
