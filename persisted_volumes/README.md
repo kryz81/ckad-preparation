@@ -55,3 +55,27 @@ spec:
       persistentVolumeClaim:
         claimName: mypvc # use claim
 ```
+
+**Mount multiple sources in the same directory in container**
+
+_pod_with_projected_volume.yaml_
+
+```yaml
+...
+spec:
+  containers:
+    - name: mypod
+      image: nginx
+      volumeMounts:
+        - name: myvolume
+          mountPath: "/projected-volume"
+          readOnly: true
+  volumes:
+    - name: myvolume
+      projected:
+        sources:
+          - secret:
+              name: user # from first secret
+          - secret:
+              name: pass # from second secret
+```
