@@ -80,3 +80,20 @@ spec:
     - name: myvolume
       emptyDir: {}
 ```
+
+**Create environment variable in pod with yaml definition field value**
+
+```yaml
+...
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      env:
+        - name: MYPODNAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+```
