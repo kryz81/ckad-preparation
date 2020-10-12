@@ -32,3 +32,18 @@ spec:
                 - -c
                 - date; echo Hello from the Kubernetes cluster
 ```
+
+**Allow running parallel jobs, set max. parallel jobs**
+
+_cronjob_parallel.yaml_
+
+```yaml
+...
+spec:
+  schedule: "*/1 * * * *"
+  concurrencyPolicy: Allow
+  jobTemplate:
+    spec:
+      parallelism: 2
+...
+```
