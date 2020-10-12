@@ -48,6 +48,12 @@ kubectl port-forward mypod 8080:80
 kubectl delete pod mypod --force --grace-period=0
 ````
 
+**Use CLI to create pod which uses bash image and runs a bash command**
+
+```shell script
+kubectl run mypod --image=bash --restart=Never -- bash -c "hostname && && date && sleep 1d"
+````
+
 **Create pod with resource limits**
 
 ```yaml
