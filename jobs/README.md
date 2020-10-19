@@ -21,3 +21,14 @@ spec:
             - sleep
             - "10"
 ```
+
+**Pause job**
+
+```yaml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: myjob
+spec:
+  parallelism: 0 # set parallelism to 0
+```
