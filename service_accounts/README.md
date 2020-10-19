@@ -24,3 +24,12 @@ spec:
     - name: nginx
       image: nginx
 ```
+
+**Disable automounting credentials in pod**
+
+```yaml
+...
+spec:
+  serviceAccountName: mysa
+  automountServiceAccountToken: false
+```
