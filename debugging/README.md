@@ -21,5 +21,5 @@ nslookup myservice
 **Use CLI to run command on container**
 
 ```shell script
-
+kubectl exec mypod sleep 10s
 ```
