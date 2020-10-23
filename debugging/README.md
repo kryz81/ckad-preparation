@@ -6,7 +6,7 @@
 kubectl get events
 ```
 
-**Check from pof if a service is running**
+**Check from pod if a service is running**
 
 _from pod_
 
