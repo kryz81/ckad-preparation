@@ -21,5 +21,17 @@ kubectl expose pod mypod --name=myservice --type=NodePort --port=80 --target-por
 **Create ClusterIP using YAML**
 
 ```yaml
-
+apiVersion: v1
+kind: Service
+metadata:
+  name: myservice
+spec:
+  type: ClusterIP
+  selector:
+    app: backend
+  ports:
+    - port: 80
+      targetPort: 80
+      name: nginx
+      protocol: TCP
 ```
