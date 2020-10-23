@@ -1,6 +1,6 @@
 ### Config maps
 
-**Use CLI to create config map from file***
+**Use CLI to create config map from file**
 
 ```shell script
 kubectl create configmap mycm --from=file=items.txt

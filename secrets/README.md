@@ -6,7 +6,7 @@
 echo -n "12345" | base64
 ```
 
-**Use CLI to create secret from file***
+**Use CLI to create secret from file**
 
 ```shell script
 kubectl create secret genetic mysecret --from-file=secrets.txt
